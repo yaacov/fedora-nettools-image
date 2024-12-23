@@ -2,6 +2,8 @@
 
 A Fedora-based container image with debugging network tools. This project creates a container image that allows you to debug network issues in an OpenShift cluster because most pods in the cluster are based on minimal images that do not include tools for debugging network issues.
 
+[quay.io/yaacov/fedora-nettools](https://quay.io/repository/yaacov/fedora-nettools?tab=tags&tag=latest)
+
 ## Building the Image
 
 To build the container image, use the following command:
@@ -34,7 +36,7 @@ spec:
 ### Apply the configuration using the following command:
 
 ```sh
-kubectl apply -f [net-tools.yaml](http://_vscodecontentref_/1)
+kubectl apply -f net-tools.yaml
 ```
 
 ## Usage
