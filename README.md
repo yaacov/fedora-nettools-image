@@ -21,6 +21,12 @@ podman push quay.io/yaacov/fedora-nettools:latest
 ## Deploying the Pod
 To deploy the pod in your OpenShift cluster, use the following net-tools.yaml configuration:
 
+```bash
+oc run fedora-nettools --image=quay.io/yaacov/fedora-nettools:latest --restart=Never
+```
+
+or use this yaml:
+
 ```yaml
 kind: Pod
 apiVersion: v1
