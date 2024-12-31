@@ -22,7 +22,11 @@ podman push quay.io/yaacov/fedora-nettools:latest
 To deploy the pod in your OpenShift cluster, use the following net-tools.yaml configuration:
 
 ```bash
+# Run the pod in current namespace
 oc run fedora-nettools --image=quay.io/yaacov/fedora-nettools:latest --restart=Never
+
+# "SSH" remotely into the pod, to execute network degugging, e.g. ping, ifconfig ...
+oc exec -it fedora-nettools -n default -- /bin/bash
 ```
 
 or use this yaml:
