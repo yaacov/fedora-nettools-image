@@ -9,6 +9,7 @@ RUN dnf install -y \
     net-tools \
     tcpdump \
     bind-utils \
+    openssl \
     && dnf clean all
 
 # Set a default command to keep the container running
